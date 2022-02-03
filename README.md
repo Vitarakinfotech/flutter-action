@@ -9,7 +9,7 @@ Use specific version and channel:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: subosito/flutter-action@v2
+- uses: Vitarak/flutter-action@v2
   with:
     flutter-version: '2.8.0'
     channel: 'stable'
@@ -21,7 +21,7 @@ Use latest release for particular channel:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: subosito/flutter-action@v2
+- uses: vitarak/flutter-action@v2
   with:
     channel: 'stable' # or: 'beta', 'dev' or 'master'
 - run: flutter --version
@@ -32,7 +32,7 @@ Use latest release for particular version and/or channel:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: subosito/flutter-action@v2
+- uses: vitarak/flutter-action@v2
   with:
     flutter-version: '1.22.x' # or, you can use 1.22
     channel: 'dev'
@@ -44,7 +44,7 @@ Use particular version on any channel:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: subosito/flutter-action@v2
+- uses: vitarak/flutter-action@v2
   with:
     flutter-version: '2.x'
     channel: 'any'
@@ -60,7 +60,7 @@ steps:
   with:
     distribution: 'zulu'
     java-version: '11'
-- uses: subosito/flutter-action@v2
+- uses: vitarak/flutter-action@v2
   with:
     flutter-version: '2.5.3'
 - run: flutter pub get
@@ -77,7 +77,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: subosito/flutter-action@v2
+    - uses: vitarak/flutter-action@v2
       with:
         flutter-version: '2.5.3'
     - run: flutter pub get
@@ -90,7 +90,7 @@ Build for the web:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: subosito/flutter-action@v2
+- uses: vitarak/flutter-action@v2
   with:
     flutter-version: '2.5.3'
 - run: flutter pub get
@@ -106,7 +106,7 @@ jobs:
    runs-on: windows-latest
    steps:
      - uses: actions/checkout@v2
-     - uses: subosito/flutter-action@v2
+     - uses: vitarak/flutter-action@v2
        with:
          channel: beta
      - run: flutter config --enable-windows-desktop
@@ -121,7 +121,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v2
-     - uses: subosito/flutter-action@v2
+     - uses: vitarak/flutter-action@v2
        with:
          channel: beta
      - run: |
@@ -139,7 +139,7 @@ jobs:
    runs-on: macos-latest
    steps:
      - uses: actions/checkout@v2
-     - uses: subosito/flutter-action@v2
+     - uses: vitarak/flutter-action@v2
        with:
          channel: beta
      - run: flutter config --enable-macos-desktop
@@ -151,7 +151,7 @@ Integration with `actions/cache`:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: subosito/flutter-action@v2
+- uses: vitarak/flutter-action@v2
   with:
     flutter-version: 2.5.0
     channel: stable
